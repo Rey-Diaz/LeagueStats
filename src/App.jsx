@@ -1,24 +1,23 @@
-// src/App.jsx
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
 import Header from './components/Header';
 import Welcome from './pages/Welcome';
 import Login from './pages/Login';
+import './index.css';
 
 function App() {
   return (
     <Router>
-      <CssBaseline /> {/* Normalize the styling across browsers */}
-      <Header />
-      <Container component="main" maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-        <Routes>
-          <Route path="/" element={<Welcome />} />
-          <Route path="/login" element={<Login />} />
-          {/* Add more routes as needed */}
-        </Routes>
-      </Container>
+      <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <Header />
+        <main style={{ flexGrow: 1 }}>
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/login" element={<Login />} />
+            {/* other routes */}
+          </Routes>
+        </main>
+        {/* Footer if you have one */}
+      </div>
     </Router>
   );
 }
