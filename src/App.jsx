@@ -1,23 +1,24 @@
+// App.jsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Welcome from './pages/Welcome';
 import Login from './pages/Login';
-import './index.css';
+// ... other imports if necessary
 
 function App() {
   return (
     <Router>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <div className="header-container">
         <Header />
-        <main style={{ flexGrow: 1 }}>
-          <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/login" element={<Login />} />
-            {/* other routes */}
-          </Routes>
-        </main>
-        {/* Footer if you have one */}
       </div>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Welcome />} />
+          <Route path="/login" element={<Login />} />
+          {/* other routes */}
+        </Routes>
+      </main>
+      {/* Footer if you have one */}
     </Router>
   );
 }

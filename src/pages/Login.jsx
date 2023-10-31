@@ -1,5 +1,4 @@
-// src/pages/Login.jsx
-
+// Login.jsx
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -15,7 +14,7 @@ const Login = () => {
   return (
     <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12} sm={8} md={6} lg={4}>
-        <Paper elevation={3} sx={{ p: 4, mt: 8 }}>
+        <Paper elevation={3} sx={{ p: 4, mt: 8 }} className="login-card">
           <h1>Login</h1>
           <TextField
             label="Summoner Name"

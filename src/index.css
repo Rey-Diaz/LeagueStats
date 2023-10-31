@@ -36,6 +36,13 @@ body.dark-mode {
   --link-hover-color: #535bf2; /* Dark link hover color */
 }
 
+/* login card color */
+.login-card {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  /* Add other styles for your card here */
+}
+
 a {
   font-weight: 500;
   color: var(--accent-color);
@@ -77,3 +84,16 @@ h1 {
 
 /* Ensure the meta tag for viewport is set in your HTML for responsiveness */
 /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
+/* App.css */
+.header-container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* High z-index to ensure the header is above other content */
+}
+
+.main-content {
+  padding-top: 64px; /* Adjust this value to match the height of your header */
+  /* Other styles for your main content area */
+}
